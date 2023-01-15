@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #181717;
+}
+
+#app {
+    width: 100%;
+    height: 1000px;
+}
+
+#card {
+    text-align: center;
+    max-width: 700px;
+    height: 350px;
+    border: solid 2px #d0d0d0;
+    border-radius: 30px;
+    background: radial-gradient(#07058d 10%, #100236 90%);
+    margin: 20% auto;
+    box-shadow: #000000 2px 2px;
+}
+
+.holder {
+    color: #d0d0d0;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    text-shadow: #181717 2px 2px;
+    margin: 50px auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+input {
+    color: #d0d0d0;
+    background-color: #ffffff00;
+    border: #d0d0d0 1px solid;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Cabin', sans-serif;
+    text-shadow: #181717 1px 1px;
+    box-shadow: #181717 1px 1px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#number_card {
+    width: 300px;
+    height: 50px;
+}
+
+#date_card {
+    width: 110px;
+    height: 50px;
+}
+
+#cvv_card {
+    width: 90px;
+    height: 50px;
+}

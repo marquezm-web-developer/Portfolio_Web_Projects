@@ -1,0 +1,124 @@
+#contenedor {
+    background-color: var(--bg-color);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#segundo_contenedor {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#primer_circulo {
+    width: 190px;
+    height: 190px;
+    border: 5px solid var(--circle-color);
+    border-radius: 50%;
+}
+
+:root {
+    --bg-color: #97a3c0;
+    --circle-color: #03106e;
+}
+
+#box_1,
+#box_2,
+#box_3,
+#box_4 {
+    background: var(--bg-color);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+#box_1 {
+    top: 0;
+    right: 0;
+    transform-origin: bottom left;
+    transition-property: transform;
+    transition-duration: 20s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    transform: rotate(-360deg);
+    z-index: 7;
+}
+
+#temporalizador_circulo {
+    width: 10px;
+    height: 10px;
+    z-index: 20;
+    background: var(--circle-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    animation-name: do2;
+    animation-delay: 0.5s;
+    animation-duration: 19.9s;
+    animation-fill-mode: forwards;
+}
+
+#box_2 {
+    right: 0;
+    top: 0;
+    transform-origin: bottom left;
+    transition: transform 15s linear 5s;
+    transform: rotate(-270deg);
+}
+
+#box_3 {
+    top: 0;
+    right: 0;
+    transform-origin: bottom left;
+    transition: transform 10s linear 10s;
+    transform: rotate(-180deg);
+}
+
+#box_4 {
+    top: 0;
+    right: 0;
+    transform-origin: bottom left;
+    transition: transform 5s linear 15s;
+    transform: rotate(-90deg);
+}
+
+#segundo_circulo {
+    border: 5px solid var(--circle-color);
+    position: absolute;
+    width: 95px;
+    height: 190px;
+    top: 0;
+    border-top-right-radius: 195px;
+    border-bottom-right-radius: 195px;
+    border-left: 0;
+    transform: translate(100px);
+    z-index: 9;
+    animation: do 0s 11s forwards;
+    opacity: 0;
+}
+
+@keyframes do {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes do2 {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}

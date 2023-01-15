@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #fbd9d9;
+    width: 100%;
+    height: 100vh;
+}
+
+#app {
+    text-align: center;
+    position: relative;
+    top: 5%;
+    min-height: 100%;
+    background-color: transparent;
+}
+
+.form {
+    max-width: 620px;
+    margin: 50px auto;
+    background: #63beef;
+    height: 200px;
+    border-radius: 5px;
+    border: #453939 solid 2px;
+}
+
+h1 {
+    color: aliceblue;
+    text-shadow: #453939 2px 2px 2px;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    background-color: transparent;
+    max-width: 90%;
+    gap: 20px;
+    position: relative;
+    top: 25%;
+    text-align: center;
+    margin: 0px auto;
+    height: 30px;
+}
+
+input {
+    border-radius: 10px;
+    border: solid #453939 2px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+#btnAdd,
+button {
+    background-color: #cb0c0c;
+    color: aliceblue;
+    font-size: 1rem;
+    border: solid #453939 2px;
+    border-radius: 10px;
+}
+
+#eventsContainer {
+    min-height: 50vh;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 0.5fr;
+    margin: 20px 50px;
+    min-height: 50px;
+    background: #63beef;
+    border-radius: 5px;
+    border: #453939 solid 2px;
+    color: aliceblue;
+    text-shadow: #453939 2px 2px 2px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.event>div {
+    position: relative;
+    top: 22%;
+}
