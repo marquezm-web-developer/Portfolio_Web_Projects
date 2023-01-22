@@ -1,31 +1,139 @@
+/*Initial global setting of web component*/ 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #1c1c1c;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(205, 241, 255);
     height: 100vh;
     width: 100%;
 }
 
-#app {
-    position: absolute;
-    top: 50%;
+/* Setting of title of the web component */
+header{
+    font-size: 2rem;
+    font-weight: 600;
     width: 100%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: #c73434;
+    text-shadow: #2e2e2e 1px 1px;
 }
 
+/*This Div wrap all the component and locate it in a center position of the page */
+#app {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+}
+
+/*This Div contain all the rating component (star rating and form elements)*/
+#container{
+    background-color: #535050;
+    border: 3px solid #2e2e2e;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 450px;
+    margin: 0px auto;
+}
+
+/* This rule setting start rating*/
 .rating {
     background-color: transparent;
     display: flex;
     justify-content: space-around;
-    border: 2px solid aliceblue;
-    margin: 0% 5%;
+    border: 3px solid aliceblue;
+    border-radius: 10px;
+    margin: 2% 5%;
+    max-width: 390px;
 }
 
+/*This rule refer to each flex element that contain star backgound-images (white star initially) */ 
 .elemento {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     margin: 5px;
     cursor: pointer;
-    background-image: url(estrella.svg);
+    background-image: url(Images/estrella.svg);
 }
 
+/* This rule modify the star background images to golden star */
 .elemento-full {
-    background-image: url(estrella_golden.svg);
+    background-image: url(Images/estrella_golden.svg);
+}
+
+/* Root of the form element (contain submit button and text area inputs)*/
+form{
+    margin: 2% 5%;
+    font-weight: 400;
+    color: aliceblue;
+    font-size: 1.1rem;
+}
+
+/* Setting Text area input*/
+textarea{
+    border-radius: 8px;
+    color: #2e2e2e;
+    padding: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Setting Submit button*/
+.para-button{
+    text-align: center;
+}
+
+p #submit{
+    padding: 6px;
+    font-weight: 600;
+    background-color: rgb(35, 141, 44);
+    color: aliceblue;
+    border: 2px solid #2e2e2e;
+    border-radius: 5px;
+}
+
+/*Setting effect hover in the submit button*/
+p #submit:hover{
+    background-color: goldenrod;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+}
+
+/*Media query when the web screen is lower than 500px*/ 
+@media(max-width: 500px){
+
+    header{
+        font-size: 1.5rem;
+        top: 25%;
+    }
+
+    #container{
+        max-width: 300px;
+        padding: 0px;
+    }
+
+    .rating{
+        min-width: 264px;
+    }
+
+    textarea{
+        width: 250px;
+    }
+
+    .elemento{
+        width: 20px;
+        height: 19px;
+        background-image: url(Images/estrella-500px-screen.svg);
+    }
+
+    .elemento-full{
+        background-image: url(Images/estrella_golden-500px-screen.svg);
+    }
+
 }

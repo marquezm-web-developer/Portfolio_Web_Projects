@@ -6,13 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="rating.css">
-    <title>Componente Rating</title>
+    <title>Rating Component</title>
 </head>
 
 <body>
+    <header>Rating Component Interfaz</header>
     <div id="app">
-        <div class="rating">
-
+        <div id="container"> 
+            <div class="rating"></div>
+            <form id="formRequest" method="post" action="processor.php">
+                <input type="hidden" id="starRating" name="starRating">
+                <p>
+                    <label for="comments">Please write your opinion</label><br>
+                    <textarea  id="comments" name="comments" placeholder="Input your comments here" cols="50" rows="10"></textarea>
+                </p>
+                <p class="para-button">
+                    <input type="submit" id="submit" name="submit" value="send it"></input>
+                </p>
+            </form>
         </div>
     </div>
 
